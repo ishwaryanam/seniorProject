@@ -1,4 +1,5 @@
 
+#for pipeline w/ model
 import sys
 '''
 the Plan:
@@ -7,8 +8,15 @@ Take 2 files from command line, file1 #secs file2 #secs
 
 	- by default take last and first seconds 
  
+ Merge the 2 audios to use as the input  
+
+Opencv – good at handling video files and merging, find an audio alternative? 
+
+Make a joint github in python - Create a merging tool based on user defined segments that will merge based on like opencv 
+ 
  '''
  
+
 
 
 def main():
