@@ -4,8 +4,8 @@ import soundfile as sf
 from pydub import AudioSegment
 
 # ---- STEP 1: Analyze tempo ----
-y1, sr1 = librosa.load("pair1a.mp3", duration=60)
-y2, sr2 = librosa.load("pair1b.mp3", duration=60)
+y1, sr1 = librosa.load("pair4a_ok.mp3", duration=60)
+y2, sr2 = librosa.load("pair4b_ok.mp3", duration=60)
 
 tempo1, _ = librosa.beat.beat_track(y=y1, sr=sr1)
 tempo2, _ = librosa.beat.beat_track(y=y2, sr=sr2)
@@ -21,7 +21,7 @@ y2_stretched = librosa.effects.time_stretch(y=y2, rate=rate)
 sf.write("song2_matched.wav", y2_stretched, sr2)
 
 # ---- STEP 3: Load audio ----
-song1 = AudioSegment.from_file("pair1a.mp3")
+song1 = AudioSegment.from_file("pair4a_ok.mp3")
 song2 = AudioSegment.from_file("song2_matched.wav")
 
 # ---- STEP 4: Prepare transition parts ----
@@ -42,6 +42,6 @@ song2_main = song2[transition_len:]   # remove first 10 s
 final_mix = song1_main + transition + song2_main
 
 # ---- STEP 7: Export final result ----
-final_mix.export("song1_to_song2_seamless.mp3", format="mp3")
+final_mix.export("fourthPair_Ok.mp3", format="mp3")
 
-print("✅ Exported 'song1_to_song2_seamless.mp3' successfully!")
+print("Done")
