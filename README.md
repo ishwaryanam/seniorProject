@@ -4,7 +4,7 @@ Ishwarya Namburu, Karen Severson
 Professor Fahim Khan
 
 
-AI Powered Music Mixing Platform cs491 github
+AI Powered Music Mixing Platform CS491 github
 
 crossFadeTransitions has the transitions created by beatMatchingTransition.py.
 
